@@ -74,11 +74,8 @@ setlocal enableextensions
 @set dy=%date:~0,2%
 @if "%dy:~0,1%" == " " @set dy=0%dy:~1,1%
 @set year=%date:~-4%
-@set build=%sec%%dy%%yr%%hr%%min%
+@set build=%sec%%dy%%year%%hr%%min%
 @echo New version: %major%.%minor%.%build%
-
-@echo SUCCESS!
-@goto :eof
 
 :: Update the version file with the new values.
 (@echo {^
@@ -96,6 +93,9 @@ setlocal enableextensions
 })>%versionfile%
 @echo Updated %versionfile%:
 @type %versionfile%
+
+@echo SUCCESS!
+@goto :eof
 
 :: Check MxD code in to git and make a tag for this version.
 @call git commit -a -m "%comment% (%major%.%minor%.%build%)"
