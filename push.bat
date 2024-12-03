@@ -95,9 +95,6 @@ setlocal enableextensions
 @echo Updated %versionfile%:
 @type %versionfile%
 
-@echo SUCCESS!
-@goto :eof
-
 :: Check MxD code in to git and make a tag for this version.
 @call git commit -a -m "%comment% (%major%.%minor%.%build%)"
 @call git push origin main
