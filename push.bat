@@ -75,6 +75,7 @@ setlocal enableextensions
 @if "%dy:~0,1%" == " " @set dy=0%dy:~1,1%
 @set year=%date:~-4%
 @set build=%sec%%dy%%year%%hr%%min%
+@if %minor% lss 10 @set minor=0%minor%
 @echo New version: %major%.%minor%.%build%
 
 :: Update the version file with the new values.
