@@ -35,6 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ButtonAnalytics = new System.Windows.Forms.Button();
+            this.ButtonCalendar = new System.Windows.Forms.Button();
+            this.ButtonContactUs = new System.Windows.Forms.Button();
+            this.ButtonSettings = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -43,6 +47,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.ButtonSettings);
+            this.panel1.Controls.Add(this.ButtonContactUs);
+            this.panel1.Controls.Add(this.ButtonCalendar);
+            this.panel1.Controls.Add(this.ButtonAnalytics);
             this.panel1.Controls.Add(this.ButtonDashboard);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -53,7 +61,6 @@
             // 
             // ButtonDashboard
             // 
-            this.ButtonDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonDashboard.FlatAppearance.BorderSize = 0;
             this.ButtonDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -112,6 +119,66 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // ButtonAnalytics
+            // 
+            this.ButtonAnalytics.FlatAppearance.BorderSize = 0;
+            this.ButtonAnalytics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAnalytics.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAnalytics.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.ButtonAnalytics.Image = ((System.Drawing.Image)(resources.GetObject("ButtonAnalytics.Image")));
+            this.ButtonAnalytics.Location = new System.Drawing.Point(0, 191);
+            this.ButtonAnalytics.Name = "ButtonAnalytics";
+            this.ButtonAnalytics.Size = new System.Drawing.Size(186, 42);
+            this.ButtonAnalytics.TabIndex = 3;
+            this.ButtonAnalytics.Text = "Analytics";
+            this.ButtonAnalytics.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ButtonAnalytics.UseVisualStyleBackColor = true;
+            // 
+            // ButtonCalendar
+            // 
+            this.ButtonCalendar.FlatAppearance.BorderSize = 0;
+            this.ButtonCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.ButtonCalendar.Image = ((System.Drawing.Image)(resources.GetObject("ButtonCalendar.Image")));
+            this.ButtonCalendar.Location = new System.Drawing.Point(-3, 239);
+            this.ButtonCalendar.Name = "ButtonCalendar";
+            this.ButtonCalendar.Size = new System.Drawing.Size(186, 42);
+            this.ButtonCalendar.TabIndex = 3;
+            this.ButtonCalendar.Text = "Calendar";
+            this.ButtonCalendar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ButtonCalendar.UseVisualStyleBackColor = true;
+            // 
+            // ButtonContactUs
+            // 
+            this.ButtonContactUs.FlatAppearance.BorderSize = 0;
+            this.ButtonContactUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonContactUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonContactUs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.ButtonContactUs.Image = ((System.Drawing.Image)(resources.GetObject("ButtonContactUs.Image")));
+            this.ButtonContactUs.Location = new System.Drawing.Point(-3, 287);
+            this.ButtonContactUs.Name = "ButtonContactUs";
+            this.ButtonContactUs.Size = new System.Drawing.Size(186, 42);
+            this.ButtonContactUs.TabIndex = 3;
+            this.ButtonContactUs.Text = "Contact Us";
+            this.ButtonContactUs.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ButtonContactUs.UseVisualStyleBackColor = true;
+            // 
+            // ButtonSettings
+            // 
+            this.ButtonSettings.FlatAppearance.BorderSize = 0;
+            this.ButtonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.ButtonSettings.Image = ((System.Drawing.Image)(resources.GetObject("ButtonSettings.Image")));
+            this.ButtonSettings.Location = new System.Drawing.Point(0, 535);
+            this.ButtonSettings.Name = "ButtonSettings";
+            this.ButtonSettings.Size = new System.Drawing.Size(186, 42);
+            this.ButtonSettings.TabIndex = 3;
+            this.ButtonSettings.Text = "Settings";
+            this.ButtonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.ButtonSettings.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -138,6 +205,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonDashboard;
+        private System.Windows.Forms.Button ButtonSettings;
+        private System.Windows.Forms.Button ButtonContactUs;
+        private System.Windows.Forms.Button ButtonCalendar;
+        private System.Windows.Forms.Button ButtonAnalytics;
     }
 }
 
