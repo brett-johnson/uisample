@@ -18,6 +18,8 @@ namespace uisample
           int nHeightEllipse
         );
 
+        public Point mouseLocation;
+
         public Form1()
         {
             InitializeComponent();
@@ -103,6 +105,26 @@ namespace uisample
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel10_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseLocation = new Point(-e.X, -e.Y);
+        }
+
+        private void panel10_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Point pos = Control.MousePosition;
+                pos.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = pos;
+            }
         }
     }
 }
