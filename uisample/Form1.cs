@@ -24,11 +24,22 @@ namespace uisample
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            Form form = new formDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Dashboard", ref form);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
 
+        // TODO: GET RID OF ref (NO NEED FOR IT)
+        private void FormFiller(string title, ref Form form)
+        {
+            labelTitle.Text = title;
+            this.panelFormLoad.Controls.Clear();
+            form.FormBorderStyle = FormBorderStyle.None;
+            this.panelFormLoad.Controls.Add(form);
+            form.Show();
         }
 
         private void ButtonDashboard_Click(object sender, EventArgs e)
@@ -38,6 +49,9 @@ namespace uisample
             PanelGlow.Top = ButtonDashboard.Top;
             PanelGlow.Left = ButtonDashboard.Left;
             ButtonDashboard.BackColor = Color.FromArgb(46, 51, 73);
+
+            Form form = new formDashboard() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Dashboard", ref form);
         }
 
         private void ButtonAnalytics_Click(object sender, EventArgs e)
@@ -47,6 +61,8 @@ namespace uisample
             PanelGlow.Left = ButtonAnalytics.Left;
             ButtonAnalytics.BackColor = Color.FromArgb(46, 51, 73);
 
+            Form form = new formAnalytics() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Analytics", ref form);
         }
 
         private void ButtonCalendar_Click(object sender, EventArgs e)
@@ -56,6 +72,8 @@ namespace uisample
             PanelGlow.Left = ButtonCalendar.Left;
             ButtonCalendar.BackColor = Color.FromArgb(46, 51, 73);
 
+            Form form = new formCalendar() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Calendar", ref form);
         }
 
         private void ButtonContactUs_Click(object sender, EventArgs e)
@@ -65,6 +83,8 @@ namespace uisample
             PanelGlow.Left = ButtonContactUs.Left;
             ButtonContactUs.BackColor = Color.FromArgb(46, 51, 73);
 
+            Form form = new formContactUs() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Contact Us", ref form);
         }
 
         private void ButtonSettings_Click(object sender, EventArgs e)
@@ -74,6 +94,8 @@ namespace uisample
             PanelGlow.Left = ButtonSettings.Left;
             ButtonSettings.BackColor = Color.FromArgb(46, 51, 73);
 
+            Form form = new formSettings() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            FormFiller("Settings", ref form);
         }
 
         private void ButtonDashboard_Leave(object sender, EventArgs e)
